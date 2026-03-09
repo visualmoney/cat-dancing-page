@@ -1,0 +1,107 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.play-btn {
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  min-width: 140px;
+}
+
+.play-btn.playing {
+  background: linear-gradient(135deg, #ff6b9d, #c44569);
+  color: white;
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.5);
+}
+
+.play-btn.paused {
+  background: linear-gradient(135deg, #a8e6cf, #3d9970);
+  color: white;
+  box-shadow: 0 4px 20px rgba(61, 153, 112, 0.5);
+}
+
+.play-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.play-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.play-btn:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+.speed-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.speed-control label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.speed-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.speed-btn {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.speed-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.speed-btn.active {
+  background: linear-gradient(135deg, #fddb92, #d1913c);
+  border-color: transparent;
+  color: #1a1a2e;
+  box-shadow: 0 4px 15px rgba(209, 145, 60, 0.5);
+}
+
+.speed-btn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .play-btn {
+    padding: 12px 32px;
+    font-size: 1rem;
+  }
+
+  .speed-btn {
+    padding: 7px 13px;
+    font-size: 0.8rem;
+  }
+}
